@@ -1,0 +1,62 @@
+<!--Row for Page 1 (existing images)-->
+<div class="row" id="page-1">
+  <!-- Existing images (page 1) -->
+  <!-- ... (your existing code for page 1 images) ... -->
+</div>
+
+<!--Row for Page 2 (new images)-->
+<div class="row" id="page-2" style="display: none;">
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="grid-item web card border-0">
+      <a href="assets/img/portfolio/6.jpg" class="hover-effect mb-0 popup-image">
+        <img class="card-img" src="assets/img/portfolio/6.jpg" alt="" />
+      </a>
+    </div>
+    <div class="card-footer border-0 pl-0 pb-0">
+      <h4 class="mb-0 h6">New Image 1</h4>
+      <p class="small mb-0">In webdesign</p>
+    </div>
+  </div>
+  <!-- Add more similar blocks for your new images here -->
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Click event for page 2
+    $("a.page-link.page-2").on("click", function (e) {
+      e.preventDefault();
+      $("#page-1").hide();
+      $("#page-2").show();
+    });
+
+    // Click event for page 1
+    $("a.page-link.page-1").on("click", function (e) {
+      e.preventDefault();
+      $("#page-1").show();
+      $("#page-2").hide();
+    });
+  });
+</script>
+
+
+<li class="page-item">
+  <a class="page-link page-1" href="javascript:;" aria-label="Previous">
+    <span aria-hidden="true">&laquo;</span>
+  </a>
+</li>
+<li class="page-item active">
+  <a class="page-link page-1" href="javascript:;">1</a>
+</li>
+<li class="page-item">
+  <a class="page-link page-2" href="javascript:;">2</a>
+</li>
+<li class="page-item">
+  <a class="page-link page-1" href="javascript:;">3</a>
+</li>
+<li class="page-item">
+  <a class="page-link page-1" href="javascript:;" aria-label="Next">
+    <span aria-hidden="true">&raquo;</span>
+  </a>
+</li>
